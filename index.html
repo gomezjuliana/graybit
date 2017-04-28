@@ -14,18 +14,22 @@
 	</header>
 	<section class="userinfo">
 		<h2>User Info</h2>
-		<div id="names"><p>Name: </p></div>
-		<div id="user"><p>User: </p></div>
-		<div id="email"><p>Email: </p></div>
-		<div id="telephone"><p>Telephone: </p></div>
-		<div id="company"><p>Company: </p></div>
+		<div id="names"></div>
+		<div id="user"></div>
+		<div id="email"></div>
+		<div id="telephone"></div>
+		<div id="company"></div>
 	</section>
 	<section class="photogallery">
 		<h2>Photo</h2>
 		<div id="albumname"><p>Album Name:</p></div>
-		<div class="prev"></div>
-		<div class="curr"></div>
-		<div class="next"></div>
+		<div id="gallery">
+			<img src="" class="myImg">
+		</div>
+		<div id="modal" class="modal">
+			<span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+			<img class="model-content" id="img01">
+		</div>
 	</section>
 	<footer>
 		<small>Made by Juliana Gomez, April 2017</small>
