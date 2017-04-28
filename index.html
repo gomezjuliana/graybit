@@ -17,15 +17,18 @@
 	</header>
 	<section class="userinfo">
 		<h2>User Info</h2>
-		<div id="names"><p><strong>Name: </strong></p></div>
-		<div id="user"><p><strong>User: </strong></p></div>
-		<div id="email"><p><strong>Email: </strong></p></div>
-		<div id="telephone"><p><strong>Telephone: </strong></p></div>
-		<div id="company"><p><strong>Company: </strong></p></div>
+		<div class="info">
+		<p class="bold">Name: <span id="names" class="inputtext"></span></p>
+		<p class="bold">User: <span id="user" class="inputtext"></span></p>
+		<p class="bold">Email: <span id="email" class="inputtext"></span></p>
+		<p class="bold">Telephone: <span id="telephone" class="inputtext"></span></p>
+		<p class="bold">Company: <span id="company" class="inputtext"></span></p>
+		</div>
 	</section>
 	<section class="photogallery">
 		<h2>Photo</h2>
-		<div id="albumname"><p><strong>Album Name:</strong></p></div>
+		<div class="photos">
+		<p class="bold">Album Name: <span id="albumname" class="inputtext"></span></p>
 		<figure id="gallery">
 			<img src="" id="myImg">
 			<figcaption><em>Click image to enlarge</em></figcaption>
@@ -33,6 +36,7 @@
 		<div id="myModal" class="modal">
 			<span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
 			<img class="model-content" id="img01" src="">
+		</div>
 		</div>
 	</section>
 	<footer>

@@ -20,11 +20,11 @@ const randomNumber = Math.floor(Math.random() * 10);
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
         let jsonResponse = JSON.parse(httpRequest.responseText);
-        document.getElementById("names").innerHTML = "<p><strong>Name: </strong>"+jsonResponse[randomNumber].name+"</p>"
-        document.getElementById("user").innerHTML = "<p><strong>User: </strong>"+jsonResponse[randomNumber].username+"</p>"
-        document.getElementById("email").innerHTML = "<p><strong>Email: </strong>"+jsonResponse[randomNumber].email+"</p>"
-        document.getElementById("telephone").innerHTML = "<p><strong>Telephone: </strong>"+jsonResponse[randomNumber].phone+"</p>"
-        document.getElementById("company").innerHTML = "<p><strong>Company: </strong>"+jsonResponse[randomNumber].company.name+"</p>"
+        document.getElementById("names").textContent = jsonResponse[randomNumber].name
+        document.getElementById("user").textContent = jsonResponse[randomNumber].username
+        document.getElementById("email").textContent = jsonResponse[randomNumber].email
+        document.getElementById("telephone").textContent = jsonResponse[randomNumber].phone
+        document.getElementById("company").textContent = jsonResponse[randomNumber].company.name
       } else {
         alert("there was a problem");
       }
@@ -52,7 +52,7 @@ const randomNumber = Math.floor(Math.random() * 10);
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
         let jsonResponse = JSON.parse(httpRequest.responseText);
-        document.getElementById("albumname").innerHTML = "<p><strong>Album Name: </strong>"+jsonResponse[randomNumber].title+"</p>"
+        document.getElementById("albumname").textContent = jsonResponse[randomNumber].title
       } else {
         alert("there was a problem");
       }
