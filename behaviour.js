@@ -77,29 +77,29 @@ var randomNumber = Math.floor(Math.random() * 10);
     httpRequest.open('GET', url);
     httpRequest.send();
   }
+
   function printPhotoInfo() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
         var jsonResponse = JSON.parse(httpRequest.responseText);
-        document.querySelector(".myImg").src = jsonResponse[randomNumber].thumbnailUrl
-        document.querySelector('model-content').src = jsonResponse[randomNumber].url
+        document.getElementById("myImg").src = jsonResponse[randomNumber].thumbnailUrl
       } else {
         alert("there was a problem");
       }
     }
-  }
 
-  var modal = document.getElementById('modal');
-  var img = document.querySelector('myImg');
+  var modal = document.getElementById('myModal');
+  var img = document.getElementById('myImg');
   var modalImg = document.getElementById('img01');
-
+  
   img.onclick = function(){
   	modal.style.display = "block";
-  	modalImg.src = this.src;
+  	modalImg.src = jsonResponse[randomNumber].url;
   }
 
-  var span = document.querySelector('close');
+  var span = document.querySelector('.close');
   span.onclick = function(){
   	modal.style.display = "none";
+  }
   }
 })();
