@@ -106,3 +106,45 @@ footer {
 	text-decoration: none;
 	cursor: pointer;
 }
+
+@media (min-width: 768px){
+	header {
+		background-position: center bottom;
+	}
+
+	.userinfo {
+		display: inline-block;
+		width: 50%;
+		float: left;
+	}
+
+	.photogallery {
+		display: inline-block;
+		width: 50%;
+		float: initial;
+	}
+
+	#img01 {
+		width: 75%;
+	}
+}
+
+@media (min-width: 1024px){
+	header {
+		background-size: cover;
+	}
+
+	footer {
+		padding: 1%;
+	}
+
+	.userinfo p,
+	.photogallery p {
+		padding-left: 20%;
+	}
+
+	#img01 {
+		width: 40%;
+	}
+}
+
