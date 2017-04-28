@@ -1,10 +1,9 @@
-var randomNumber = Math.floor(Math.random() * 10);
+const randomNumber = Math.floor(Math.random() * 10);
 
 (function(){
-  var httpRequest;
+  let httpRequest;
   getUserInfo("http://jsonplaceholder.typicode.com/users");
      
-  
   function getUserInfo(url) {
     httpRequest = new XMLHttpRequest();
     
@@ -16,15 +15,16 @@ var randomNumber = Math.floor(Math.random() * 10);
     httpRequest.open('GET', url);
     httpRequest.send();
   }
+
   function printUserInfo() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
-        var jsonResponse = JSON.parse(httpRequest.responseText);
-        document.getElementById("names").innerHTML = "<p>Name: "+jsonResponse[randomNumber].name+"</p>"
-        document.getElementById("user").innerHTML = "<p>User: "+jsonResponse[randomNumber].username+"</p>"
-        document.getElementById("email").innerHTML = "<p>email: "+jsonResponse[randomNumber].email+"</p>"
-        document.getElementById("telephone").innerHTML = "<p>telephone: "+jsonResponse[randomNumber].phone+"</p>"
-        document.getElementById("company").innerHTML = "<p>Company: "+jsonResponse[randomNumber].company.name+"</p>"
+        let jsonResponse = JSON.parse(httpRequest.responseText);
+        document.getElementById("names").innerHTML = "<p><strong>Name: </strong>"+jsonResponse[randomNumber].name+"</p>"
+        document.getElementById("user").innerHTML = "<p><strong>User: </strong>"+jsonResponse[randomNumber].username+"</p>"
+        document.getElementById("email").innerHTML = "<p><strong>Email: </strong>"+jsonResponse[randomNumber].email+"</p>"
+        document.getElementById("telephone").innerHTML = "<p><strong>Telephone: </strong>"+jsonResponse[randomNumber].phone+"</p>"
+        document.getElementById("company").innerHTML = "<p><strong>Company: </strong>"+jsonResponse[randomNumber].company.name+"</p>"
       } else {
         alert("there was a problem");
       }
@@ -33,10 +33,9 @@ var randomNumber = Math.floor(Math.random() * 10);
 })();
 
 (function(){
-  var httpRequest;
+  let httpRequest;
   getAlbumInfo("http://jsonplaceholder.typicode.com/albums");
      
-  
   function getAlbumInfo(url) {
     httpRequest = new XMLHttpRequest();
     
@@ -48,12 +47,12 @@ var randomNumber = Math.floor(Math.random() * 10);
     httpRequest.open('GET', url);
     httpRequest.send();
   }
+
   function printAlbumInfo() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
-        var jsonResponse = JSON.parse(httpRequest.responseText);
-        document.getElementById("albumname").innerHTML = "<p>Album Name: "+jsonResponse[randomNumber].title+"</p>"
-        
+        let jsonResponse = JSON.parse(httpRequest.responseText);
+        document.getElementById("albumname").innerHTML = "<p><strong>Album Name: </strong>"+jsonResponse[randomNumber].title+"</p>"
       } else {
         alert("there was a problem");
       }
@@ -62,9 +61,8 @@ var randomNumber = Math.floor(Math.random() * 10);
 })();
 
 (function(){
-  var httpRequest;
-  getPhotoInfo("http://jsonplaceholder.typicode.com/photos");
-     
+  let httpRequest;
+  getPhotoInfo("http://jsonplaceholder.typicode.com/photos"); 
   
   function getPhotoInfo(url) {
     httpRequest = new XMLHttpRequest();
@@ -88,18 +86,18 @@ var randomNumber = Math.floor(Math.random() * 10);
       }
     }
 
-  var modal = document.getElementById('myModal');
-  var img = document.getElementById('myImg');
-  var modalImg = document.getElementById('img01');
+    let modal = document.getElementById('myModal');
+    let img = document.getElementById('myImg');
+    let modalImg = document.getElementById('img01');
   
-  img.onclick = function(){
-  	modal.style.display = "block";
-  	modalImg.src = jsonResponse[randomNumber].url;
-  }
+    img.onclick = function(){
+  	  modal.style.display = "block";
+  	  modalImg.src = jsonResponse[randomNumber].url;
+    }
 
-  var span = document.querySelector('.close');
-  span.onclick = function(){
-  	modal.style.display = "none";
-  }
+    let span = document.querySelector('.close');
+    span.onclick = function(){
+  	  modal.style.display = "none";
+    }
   }
 })();
