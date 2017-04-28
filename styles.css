@@ -1,3 +1,50 @@
+body {
+	background-color: #f5eded;
+	margin: 0;
+	text-align: center;
+}
+
+p {
+	font-family: 'Taviraj', serif;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+header {
+  background-image: url("https://static.pexels.com/photos/131256/pexels-photo-131256.jpeg");
+  background-size: contain;
+  background-position: center center;
+  background-attachment: fixed;
+  color: #ffd700;
+}
+
+h1 {
+	margin: 0;
+	padding: 5%;
+	font-family: 'Work Sans', sans-serif;
+}
+
+h2 {
+	font-family: 'Work Sans', sans-serif;
+	color: #f39c12;
+}
+
+header p {
+	padding: 0 5% 10%;
+}
+
+.userinfo p,
+.photogallery p {
+	text-align: left;
+}
+
+footer {
+	background-color: black;
+	padding: 5%;
+	margin-top: 10%;
+	color: white;
+}
+
 #myImg:hover {
 	opacity: 0.7;
 }
@@ -25,6 +72,10 @@
 	animation-duration: 0.6s;
 }
 
+#img01 {
+	width: 100%;
+}
+
 @-webkit-keyframes zoom {
 	from {
 		-webkit-transform: scale(0);
@@ -32,6 +83,11 @@
 	to {
 		-webkit-transform: scale(1);
 	}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
 }
 
 .close {

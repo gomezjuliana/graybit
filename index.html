@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Working Title</title>
+	<link href="https://fonts.googleapis.com/css?family=Taviraj|Work+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,18 +15,19 @@
 	</header>
 	<section class="userinfo">
 		<h2>User Info</h2>
-		<div id="names"></div>
-		<div id="user"></div>
-		<div id="email"></div>
-		<div id="telephone"></div>
-		<div id="company"></div>
+		<div id="names"><p><strong>Name: </strong></p></div>
+		<div id="user"><p><strong>User: </strong></p></div>
+		<div id="email"><p><strong>Email: </strong></p></div>
+		<div id="telephone"><p><strong>Telephone: </strong></p></div>
+		<div id="company"><p><strong>Company: </strong></p></div>
 	</section>
 	<section class="photogallery">
 		<h2>Photo</h2>
-		<div id="albumname"><p>Album Name:</p></div>
-		<div id="gallery">
+		<div id="albumname"><p><strong>Album Name:</strong></p></div>
+		<figure id="gallery">
 			<img src="" id="myImg">
-		</div>
+			<figcaption><em>Click image to enlarge</em></figcaption>
+		</figure>
 		<div id="myModal" class="modal">
 			<span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
 			<img class="model-content" id="img01" src="">
