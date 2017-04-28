@@ -109,6 +109,7 @@ footer {
 
 @media (min-width: 768px){
 	header {
+		background-size: cover;
 		background-position: center bottom;
 	}
 
@@ -125,18 +126,15 @@ footer {
 	}
 
 	#img01 {
-		width: 75%;
-	}
-}
-
-@media (min-width: 1024px){
-	header {
-		background-size: cover;
+		width: 50%;
 	}
 
 	footer {
 		padding: 1%;
 	}
+}
+
+@media (min-width: 1024px){
 
 	.userinfo p,
 	.photogallery p {
