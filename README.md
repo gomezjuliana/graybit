@@ -1,4 +1,4 @@
-# BitGray Technical Test
+# Technical Test
 
 Using [JSON Placeholder](http://jsonplaceholder.typicode.com/) create a responsive application according to the instructions provided. This repo contains the code used to create this application. Further, the app has been uploaded to Heroku and can be viewed [here](http://graybit.herokuapp.com/index.html).
 
